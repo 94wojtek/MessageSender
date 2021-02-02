@@ -30,10 +30,10 @@ class MessageRetrieverTest {
     void setUp() {
         messageRetriever = new MessageRetriever(DEFAULT_FILE_NAME, fileLinesReaderMock);
         messageRetrieverSpy = spy(messageRetriever);
-        SAMPLE_MESSAGES_LIST.add("pupa");
-        SAMPLE_MESSAGES_LIST.add("klawisz");
-        SAMPLE_MESSAGES_LIST.add("mordeczka");
-        SAMPLE_MESSAGES_LIST.add("java");
+        SAMPLE_MESSAGES_LIST.add("entry1");
+        SAMPLE_MESSAGES_LIST.add("entry2");
+        SAMPLE_MESSAGES_LIST.add("entry3");
+        SAMPLE_MESSAGES_LIST.add("entry4");
     }
 
     @Test
@@ -42,7 +42,7 @@ class MessageRetrieverTest {
         when(fileLinesReaderMock.readAllLines(anyString())).thenReturn(SAMPLE_MESSAGES_LIST);
         when(messageRetrieverSpy.generateRandom()).thenReturn(random);
         when(random.nextInt(SAMPLE_MESSAGES_LIST.size())).thenReturn(3);
-        assertEquals("java", messageRetrieverSpy.retrieveRandomMessage());
+        assertEquals("entry4", messageRetrieverSpy.retrieveRandomMessage());
     }
 
     @Test
