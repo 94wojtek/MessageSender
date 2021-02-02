@@ -27,12 +27,12 @@ class MessageSenderTest {
         SAMPLE_CONT_MAP.put("111111111", "michal");
         SAMPLE_CONT_MAP.put("222222222", "ola");
         SAMPLE_CONT_MAP.put("333333333", "ela");
-        SAMPLE_CONT_MAP.put("444444444", "dizel");
+        SAMPLE_CONT_MAP.put("444444444", "mateusz");
 
-        SAMPLE_MESSAGES_ARR_STRING.add("pupa");
-        SAMPLE_MESSAGES_ARR_STRING.add("klawisz");
-        SAMPLE_MESSAGES_ARR_STRING.add("mordeczka");
-        SAMPLE_MESSAGES_ARR_STRING.add("java");
+        SAMPLE_MESSAGES_ARR_STRING.add("entry1");
+        SAMPLE_MESSAGES_ARR_STRING.add("entry2");
+        SAMPLE_MESSAGES_ARR_STRING.add("entry3");
+        SAMPLE_MESSAGES_ARR_STRING.add("entry4");
 
         messageRetrieverMock = mock(MessageRetriever.class);
         contactDetailRetrieverMock = mock(ContactDetailRetriever.class);
@@ -46,7 +46,7 @@ class MessageSenderTest {
         representation.put("111111111", "michal");
         representation.put("222222222", "ola");
         representation.put("333333333", "ela");
-        representation.put("444444444", "dizel");
+        representation.put("444444444", "mateusz");
 
         when(fileInjectorMock.buildContactDetailRetriever()).thenReturn(contactDetailRetrieverMock);
         when(contactDetailRetrieverMock.mapOfContact()).thenReturn(SAMPLE_CONT_MAP);
